@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_string_interpolations
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
+import 'package:google_fonts/google_fonts.dart';
 import 'package:cypto_design/src/home/credit_card.dart';
 import 'package:cypto_design/src/home/transactions_list.dart';
 import 'package:decorated_icon/decorated_icon.dart';
@@ -72,9 +73,9 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       "My Cards",
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.0,
-                      ),
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "See all",
@@ -101,9 +102,9 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       "Recent Transactions",
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.0,
-                      ),
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "See all",
