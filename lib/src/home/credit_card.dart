@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'dart:math' as math;
 
+
 import 'package:flutter/material.dart';
 
 class CreditCard extends StatelessWidget {
@@ -24,8 +25,8 @@ class CreditCard extends StatelessWidget {
               ),
             ),
             child: SizedBox(
-              height: 180.0,
-              width: 300,
+              height: 170.0,
+              width: 290,
             )),
       ),
       Container(
@@ -54,8 +55,8 @@ class CreditCard extends StatelessWidget {
           ),
         ),
         child: SizedBox(
-            height: 180.0,
-            width: 300,
+            height: 170.0,
+            width: 290,
             child: Stack(children: [
               Positioned(
                   top: -40,
@@ -105,7 +106,7 @@ class CreditCard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 40.0,
+                      height: 36.0,
                     ),
                     Text(
                       "0562 6589 2235 0030",
@@ -113,7 +114,7 @@ class CreditCard extends StatelessWidget {
                           fontSize: 18.0, fontWeight: FontWeight.w600),
                     ),
                     SizedBox(
-                      height: 22.0,
+                      height: 20.0,
                     ),
                     Text(
                       "Balance Amount",
@@ -121,7 +122,7 @@ class CreditCard extends StatelessWidget {
                           fontSize: 12.0, fontWeight: FontWeight.w200),
                     ),
                     SizedBox(
-                      height: 5.0,
+                      height: 4.0,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.baseline,

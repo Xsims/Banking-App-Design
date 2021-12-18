@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: backgroundColor,
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(40.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -87,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 40.0,),
                 CreditCard(),
-                 SizedBox(height: 40.0,),
+                 SizedBox(height: 60.0,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -110,6 +110,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 30.0,),
                 TransactionsList()
               ],
             ),
