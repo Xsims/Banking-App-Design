@@ -5,6 +5,7 @@ import 'package:cypto_design/src/home/credit_card.dart';
 import 'package:cypto_design/src/home/transactions_list.dart';
 import 'package:decorated_icon/decorated_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -31,8 +32,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     DateTime today = DateTime.now();
-    String date =
-        "${today.year.toString()}-${today.month.toString().padLeft(2, '0')}-${today.day.toString().padLeft(2, '0')}";
+    var dateNew = DateFormat.yMMMMd().format(today);
+    String date = dateNew;
     return SafeArea(
       child: Scaffold(
         backgroundColor: backgroundColor,
@@ -66,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,           
+                  textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
                       "My Cards",
@@ -79,19 +80,23 @@ class HomeScreen extends StatelessWidget {
                       "See all",
                       style: TextStyle(
                         color: Colors.white,
-                        fontWeight:  FontWeight.w300,
+                        fontWeight: FontWeight.w300,
                         fontSize: 14.0,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 40.0,),
+                SizedBox(
+                  height: 40.0,
+                ),
                 CreditCard(),
-                 SizedBox(height: 60.0,),
+                SizedBox(
+                  height: 60.0,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,           
+                  textBaseline: TextBaseline.alphabetic,
                   children: [
                     Text(
                       "Recent Transactions",
@@ -104,13 +109,15 @@ class HomeScreen extends StatelessWidget {
                       "See all",
                       style: TextStyle(
                         color: Colors.white,
-                        fontWeight:  FontWeight.w300,
+                        fontWeight: FontWeight.w300,
                         fontSize: 14.0,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 30.0,),
+                SizedBox(
+                  height: 30.0,
+                ),
                 TransactionsList()
               ],
             ),
