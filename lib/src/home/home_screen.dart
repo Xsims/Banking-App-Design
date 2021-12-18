@@ -127,10 +127,6 @@ class HomeScreen extends StatelessWidget {
                       blurRadius: 42.0,
                       color: Colors.white,
                       spreadRadius: 30.0),
-                  // BoxShadow(
-                  //   blurRadius: 12.0,
-                  //   color: Colors.white,
-                  // ),
                 ],
               ),
               label: 'Home',

@@ -29,9 +29,11 @@ class CreditCard extends StatelessWidget {
             )),
       ),
       Container(
+        clipBehavior: Clip.hardEdge,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           //color: Colors.purpleAccent[100],
+          
           boxShadow: [
             const BoxShadow(
               color: Colors.black,
@@ -59,6 +61,7 @@ class CreditCard extends StatelessWidget {
                   top: -40,
                   right: -30,
                   child: Container(
+                    
                     decoration: BoxDecoration(
                       //color: Color(0x81FFFFFF),
                       borderRadius: BorderRadius.all(
@@ -101,7 +104,7 @@ class CreditCard extends StatelessWidget {
                       height: 40.0,
                     ),
                     Text(
-                      "5136 4520 8754 1296",
+                      "0562 6589 2235 0030",
                       style: TextStyle(
                           fontSize: 18.0, fontWeight: FontWeight.w600),
                     ),
