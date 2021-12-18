@@ -33,7 +33,7 @@ class CreditCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20.0)),
           //color: Colors.purpleAccent[100],
-          
+
           boxShadow: [
             const BoxShadow(
               color: Colors.black,
@@ -61,18 +61,22 @@ class CreditCard extends StatelessWidget {
                   top: -40,
                   right: -30,
                   child: Container(
-                    
                     decoration: BoxDecoration(
                       //color: Color(0x81FFFFFF),
                       borderRadius: BorderRadius.all(
                         Radius.circular(200),
                       ),
+                      // boxShadow: [
+                      //   BoxShadow(
+                      //       blurRadius: 42.0,
+                      //       color: Colors.white,
+                      //       spreadRadius: 30.0),
+                      // ],
                       gradient: LinearGradient(
                         begin: Alignment.bottomLeft,
                         end: Alignment.topRight,
-
                         colors: [
-                          Color(0x11FFFFFF),
+                          Color(0x00FFFFFF),
                           Color(0xFFFFFFFF),
                         ],
                       ),
