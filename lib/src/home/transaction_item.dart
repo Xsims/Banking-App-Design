@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:decorated_icon/decorated_icon.dart';
+import 'package:palette_generator/palette_generator.dart';
 
 class TransactionItem extends StatelessWidget {
   final String company;
@@ -10,13 +11,20 @@ class TransactionItem extends StatelessWidget {
   final String type;
   final String imageUrl;
 
-  const TransactionItem(
+  TransactionItem(
       {Key? key,
       required this.company,
       required this.price,
       required this.date,
-      required this.type, required this.imageUrl})
+      required this.type,
+      required this.imageUrl})
       : super(key: key);
+
+  Future<Color> getImagePalette(ImageProvider imageProvider) async {
+    final PaletteGenerator paletteGenerator =
+        await PaletteGenerator.fromImageProvider(imageProvider);
+    return paletteGenerator.dominantColor?.color ?? Colors.white;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,22 +35,53 @@ class TransactionItem extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            AspectRatio(
-              aspectRatio: 1.0,
-              child: Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                    color: Colors.white),
-                child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: CircleAvatar(
-                      radius: 30.0,
-                      backgroundImage: NetworkImage(
-                          imageUrl),
-                      backgroundColor: Colors.transparent,
-                    )),
-              ),
-            ),
+            FutureBuilder(
+                future: getImagePalette(NetworkImage(imageUrl)),
+                builder: (context, AsyncSnapshot<Color> bgImgColor) {
+                  if (bgImgColor.hasData) {
+                    return AspectRatio(
+                      aspectRatio: 1.0,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                          color: Colors.white,
+                        ),
+                        child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                          color: bgImgColor.data!.withOpacity(0.4),
+                        ), child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Container(
+                              clipBehavior: Clip.hardEdge,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(12)),
+                                  color: bgImgColor.data?.withOpacity(0.5),
+                                  boxShadow: [
+                                    // BoxShadow(
+                                    //     blurRadius: 12.0,
+                                    //     color: bgImgColor.data!.withOpacity(0.4),
+                                    //     spreadRadius: 10.0),
+                                    BoxShadow(
+                                        blurRadius: 10.0,
+                                        color: bgImgColor.data!,
+                                        spreadRadius: 2.0),
+                                  ]),
+                              child: CircleAvatar(
+                                radius: 24.0,
+                                backgroundImage: NetworkImage(imageUrl),
+                                backgroundColor: Colors.transparent,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                }),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20.0, 0.0, 2.0, 0.0),
@@ -55,7 +94,7 @@ class TransactionItem extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                              company,
+                            company,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
@@ -68,7 +107,6 @@ class TransactionItem extends StatelessWidget {
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
-                            
                               fontWeight: FontWeight.bold,
                             ),
                           ),
