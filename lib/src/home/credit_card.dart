@@ -67,12 +67,7 @@ class CreditCard extends StatelessWidget {
                       borderRadius: BorderRadius.all(
                         Radius.circular(200),
                       ),
-                      // boxShadow: [
-                      //   BoxShadow(
-                      //       blurRadius: 42.0,
-                      //       color: Colors.white,
-                      //       spreadRadius: 30.0),
-                      // ],
+    
                       gradient: LinearGradient(
                         begin: Alignment.bottomLeft,
                         end: Alignment.topRight,
@@ -97,7 +92,7 @@ class CreditCard extends StatelessWidget {
                       children: [
                         Text(
                           "Mohamed Arshad",
-                          // style: TextStyle(fontWeight: FontWeight.w300),
+                          style: TextStyle(fontSize: 12),
                         ),
                         Image.network(
                           "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1280px-Visa_Inc._logo.svg.png",
@@ -106,23 +101,23 @@ class CreditCard extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                      height: 36.0,
+                      height: 32.0,
                     ),
                     Text(
                       "0562 6589 2235 0030",
                       style: TextStyle(
-                          fontSize: 18.0, fontWeight: FontWeight.w600),
+                          fontSize: 16.0, fontWeight: FontWeight.w600),
                     ),
                     SizedBox(
-                      height: 20.0,
+                      height: 18.0,
                     ),
                     Text(
                       "Balance Amount",
                       style: TextStyle(
-                          fontSize: 12.0, fontWeight: FontWeight.w200),
+                          fontSize: 10.0, fontWeight: FontWeight.w200),
                     ),
                     SizedBox(
-                      height: 4.0,
+                      height: 2.0,
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.baseline,

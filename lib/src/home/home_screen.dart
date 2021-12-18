@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                       "My Cards",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20.0,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                       "Recent Transactions",
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 20.0,
+                          fontSize: 16.0,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
