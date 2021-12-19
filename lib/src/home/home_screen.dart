@@ -2,7 +2,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cypto_design/src/home/credit_card.dart';
+import 'package:cypto_design/src/home/credit_card/credit_card_ui.dart';
 import 'package:cypto_design/src/home/transactions_list.dart';
 import 'package:decorated_icon/decorated_icon.dart';
 import 'package:flutter/material.dart';
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 40.0,
                 ),
-                CreditCard(),
+                CreditCardUi(),
                 SizedBox(
                   height: 60.0,
                 ),
