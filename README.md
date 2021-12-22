@@ -11,41 +11,34 @@ Also fetching data from the network and integrating persisted data in the databa
 <img src="./previews/cover.png"/>
 </p>
 
-## Download
-Go to the [Releases](https://github.com/skydoves/Pokedex/releases) to download the latest APK.
-
-
-<img src="/previews/preview.gif" align="right" width="32%"/>
+<img src="./previews/demo.gif" align="right" width="32%"/>
 
 ## Tech stack & Open-source libraries
-
-# cypto_design
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple).
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-## Assets
-
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
-
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
-
-## Localization
-
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
-
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter
-apps](https://flutter.dev/docs/development/accessibility-and-localization/internationalization)
+- Minimum SDK level 21
+- [Kotlin](https://kotlinlang.org/) based, [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
+- palette_generator: ^0.3.2
+-   google_fonts: ^2.1.0
+- flutter_lints: ^1.0.0
+-  decorated_icon: ^1.2.1
+- [Hilt](https://dagger.dev/hilt/) for dependency injection.
+- JetPack
+  - Lifecycle - dispose of observing data when lifecycle state changes.
+  - ViewModel - UI related data holder, lifecycle aware.
+  - Room Persistence - construct a database using the abstract layer.
+- Architecture
+  - MVVM Architecture (View - DataBinding - ViewModel - Model)
+  - [Bindables](https://github.com/skydoves/bindables) - Android DataBinding kit for notifying data changes to UI layers.
+  - Repository pattern
+- [Retrofit2 & OkHttp3](https://github.com/square/retrofit) - construct the REST APIs and paging network data.
+- [Sandwich](https://github.com/skydoves/Sandwich) - construct lightweight http API response and handling error responses.
+- [Moshi](https://github.com/square/moshi/) - A modern JSON library for Kotlin and Java.
+- [Glide](https://github.com/bumptech/glide), [GlidePalette](https://github.com/florent37/GlidePalette) - loading images.
+- [TransformationLayout](https://github.com/skydoves/transformationlayout) - implementing transformation motion animations.
+- [WhatIf](https://github.com/skydoves/whatif) - checking nullable object and empty collections more fluently.
+- [Bundler](https://github.com/skydoves/bundler) - Android Intent & Bundle extensions that insert and retrieve values elegantly.
+- [Timber](https://github.com/JakeWharton/timber) - logging.
+- [Material-Components](https://github.com/material-components/material-components-android) - Material design components like ripple animation, cardView.
+- Custom Views
+  - [Rainbow](https://github.com/skydoves/rainbow) - An easy way to apply gradations and tinting for Android.
+  - [AndroidRibbon](https://github.com/skydoves/androidribbon) - A simple way to implement a  beautiful ribbon with the shimmering on Android.
+  - [ProgressView](https://github.com/skydoves/progressview) - A polished and flexible ProgressView, fully customizable with animations.

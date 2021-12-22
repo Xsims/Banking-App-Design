@@ -77,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       BottomNavigationBarItem(
         icon: ShinyBottomNavBarIcon(
-          isSelected: selectedIndex == 2,
+          isSelected: selectedIndex == 3,
           icon: Icons.account_circle,
           ),
         label: 'School',
