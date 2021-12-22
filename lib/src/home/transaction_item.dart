@@ -31,7 +31,7 @@ class TransactionItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: SizedBox(
-        height: 50,
+        height: 70,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -59,10 +59,6 @@ class TransactionItem extends StatelessWidget {
                                       BorderRadius.all(Radius.circular(12)),
                                   color: bgImgColor.data?.withOpacity(0.5),
                                   boxShadow: [
-                                    // BoxShadow(
-                                    //     blurRadius: 12.0,
-                                    //     color: bgImgColor.data!.withOpacity(0.4),
-                                    //     spreadRadius: 10.0),
                                     BoxShadow(
                                         blurRadius: 10.0,
                                         color: bgImgColor.data!,
@@ -82,6 +78,7 @@ class TransactionItem extends StatelessWidget {
                     return CircularProgressIndicator();
                   }
                 }),
+            SizedBox(width: 12,),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20.0, 0.0, 2.0, 0.0),
@@ -99,15 +96,16 @@ class TransactionItem extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
+                              fontSize: 18.0,
                             ),
                           ),
-                          const Padding(padding: EdgeInsets.only(bottom: 2.0)),
                           Text(
                             price,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
+                              fontSize: 18.0,
                             ),
                           ),
                         ],
@@ -116,18 +114,18 @@ class TransactionItem extends StatelessWidget {
                     Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>[
                           Text(
                             date,
                             style: const TextStyle(
-                              fontSize: 12.0,
+                              fontSize: 16.0,
                             ),
                           ),
                           Text(
                             type,
                             style: const TextStyle(
-                              fontSize: 12.0,
+                              fontSize: 16.0,
                             ),
                           ),
                         ],

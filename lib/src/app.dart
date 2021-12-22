@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
               Theme.of(context).textTheme,
             ),
           ),
+          debugShowCheckedModeBanner: false,
           darkTheme: ThemeData.dark().copyWith(
             textTheme: GoogleFonts.poppinsTextTheme(
               ThemeData.dark().textTheme,

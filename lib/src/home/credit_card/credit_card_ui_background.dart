@@ -12,8 +12,8 @@ class CreditCardUiBackground extends StatelessWidget {
       {Key? key,
       this.content,
       required this.color,
-      this.height = 170,
-      this.width = 290})
+      this.height = 220,
+      this.width = 360})
       : super(key: key);
 
   @override
