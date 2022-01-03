@@ -1,9 +1,9 @@
 import 'package:cypto_design/src/home/credit_card/credit_card_ui_stack.dart';
-import 'package:cypto_design/src/home/transactions_list.dart';
+import 'package:cypto_design/src/home/tansactions/transactions_list.dart';
 import 'package:flutter/material.dart';
 import '../theme.dart';
 import 'home_screen_app_bar.dart';
-import 'home_screen_bottom_bar.dart';
+import 'home_screen_shiny_bottom_nav_bar_icon.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

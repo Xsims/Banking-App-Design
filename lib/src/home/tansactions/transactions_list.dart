@@ -1,4 +1,4 @@
-import 'package:cypto_design/src/sample_feature/sample_item.dart';
+import 'package:cypto_design/src/home/tansactions/transaction.dart';
 import 'package:flutter/material.dart';
 
 import 'transaction_item.dart';
@@ -7,24 +7,24 @@ class TransactionsList extends StatelessWidget {
   const TransactionsList({
     Key? key,
     this.items = const [
-      SampleItem("Paypal", "- \$ 47.04", "5 August", "Transfer",
+      Transaction("Paypal", "- \$ 47.04", "5 August", "Transfer",
           "https://hellowilla.co/wp-content/uploads/2019/05/paypal.png"),
-      SampleItem("Dribbble", "- \$ 50.00", "2 August", "Subscription",
+      Transaction("Dribbble", "- \$ 50.00", "2 August", "Subscription",
           "https://www.stampaprint.fr/blog/wp-content/uploads/2016/05/logo-dribbble2.png"),
-      SampleItem("Behance", "- \$ 50.00", "1 August", "Subscription",
+      Transaction("Behance", "- \$ 50.00", "1 August", "Subscription",
           "https://cdn-icons-png.flaticon.com/512/145/145799.png"),
-      SampleItem("Youtube", "- \$ 40.00", "30 July", "Subscription",
+      Transaction("Youtube", "- \$ 40.00", "30 July", "Subscription",
           "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/YouTube_social_white_squircle.svg/800px-YouTube_social_white_squircle.svg.png"),
-      SampleItem("Paypal", "- \$ 32.50", "25 July", "Transfer",
+      Transaction("Paypal", "- \$ 32.50", "25 July", "Transfer",
           "https://hellowilla.co/wp-content/uploads/2019/05/paypal.png"),
-      SampleItem("Dribbble", "- \$ 50.00", "2 July", "Subscription",
+      Transaction("Dribbble", "- \$ 50.00", "2 July", "Subscription",
           "https://www.stampaprint.fr/blog/wp-content/uploads/2016/05/logo-dribbble2.png"),
-      SampleItem("Behance", "- \$ 50.00", "1 July", "Subscription",
+      Transaction("Behance", "- \$ 50.00", "1 July", "Subscription",
           "https://cdn-icons-png.flaticon.com/512/145/145799.png"),
     ],
   }) : super(key: key);
 
-  final List<SampleItem> items;
+  final List<Transaction> items;
 
   @override
   Widget build(BuildContext context) {
