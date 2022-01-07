@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">  
-Banking App is a one screen project based on <a href="https://dribbble.com/shots/16917970-Fintech-app-design?utm_source=Clipboard_Shot&utm_campaign=Website_Dosage&utm_content=Fintech%20app%20design&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=Website_Dosage&utm_content=Fintech%20app%20design&utm_medium=Social_Share">Website Dosage</a> design without any business logic.
+Banking App is a one screen project based on <a href="https://dosage.pro/">Website Dosage</a> design without any business logic.
 <br>This project is intended to focus only on integrating the design with <a href="https://flutter.dev/">Flutter</a><br>
 </p>
 </br>
